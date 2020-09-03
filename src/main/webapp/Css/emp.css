@@ -1,0 +1,75 @@
+.jumbo_bg{
+    background-image: url(https://assets.pcmag.com/media/images/561995-cloud-based-employee-management.jpg?thumb=y&width=980&height=456);
+}
+/*about*/
+
+#about{
+    background-color:rgb(84, 14, 212)
+
+}
+#about .pic{
+    height: 600px;
+    background:url(https://www.foodengineeringmag.com/ext/resources/Issues/2016/08-August/fe-cover-aug.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 600px solid transparent;
+    border-left: 100px solid #2D3142;
+
+}
+
+#about .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*end of about */
+/*contact section*/
+#contact{
+    padding: 40px;
+    background-color: whitesmoke;	
+}
+
+#contact .form-control{
+    border-radius: 0!important;
+    font-size: 20px;
+
+}
+
+#contact button{
+    background-color: #353531;
+    font-size:24px;
+    color: #F15025;
+    margin-bottom: 20px;
+}
+
+#contact button:hover{
+    background-color: aqua;
+}
+/*end of contact section*/
+
+/*footer*/
+
+#footer{
+    padding: 40px;
+    color: whitesmoke;
+    background-color: aquamarine;
+
+}
+#footer .footer-icon{
+    font-size: 60px;
+    padding-top: 30px;
+}
+#footer .footer-icon a{
+    color: darkcyan;
+    text-decoration: none;
+}
+#footer .footer-icon a:hover{
+    color: #f15025;
+}
+#footer .Copyrights h3{
+    padding: 40px 0;
+    color: #CED0CE;
+}
+

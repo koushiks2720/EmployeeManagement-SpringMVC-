@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+	
+   
+   <context:component-scan base-package="com.spring.controller"></context:component-scan>
+   <context:component-scan base-package="com.spring.mvc.log"></context:component-scan>
+   <context:component-scan base-package="com.spring.mvc.reg"></context:component-scan>
+   
+   
+    <bean name="viewResilver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+      
+      <property name="prefix">
+      <value>/WEB-INF/views/</value>
+      </property>
+    
+    <property name="suffix">
+      <value>.jsp</value>
+      </property>
+    </bean>
+    <bean id="ds" 
+    class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+    p:driverClassName="com.mysql.cj.jdbc.Driver" p:url="jdbc:mysql://localhost:3306/employeemanagment" 
+    p:username="root" p:password="root"/>
+    
+    <bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
+    <property name="dataSource" ref="ds"></property>
+    </bean>
+    
+    
+  <bean id="dao" class="com.spring.dao.EmpDAO">
+   
+   <property name="template" ref="jt"></property>
+   </bean>
+   
+   
+   </beans>
